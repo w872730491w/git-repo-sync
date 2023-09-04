@@ -2,6 +2,7 @@ git remote add target http://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${IN
 
 case "${GITHUB_EVENT_NAME}" in
     push)
+        git pull
         git push --all target
         ;;
     delete)
